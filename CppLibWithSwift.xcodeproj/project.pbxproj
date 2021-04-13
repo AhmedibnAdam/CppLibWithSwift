@@ -13,6 +13,8 @@
 		2E95958C2625BB6C006F610C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E95958A2625BB6C006F610C /* Main.storyboard */; };
 		2E95958E2625BB70006F610C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E95958D2625BB70006F610C /* Assets.xcassets */; };
 		2E9595912625BB70006F610C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E95958F2625BB70006F610C /* LaunchScreen.storyboard */; };
+		2E95959E2625BB90006F610C /* HelloAdam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E95959C2625BB90006F610C /* HelloAdam.cpp */; };
+		2E9595A22625BBBE006F610C /* HelloAdamWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9595A12625BBBE006F610C /* HelloAdamWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,11 @@
 		2E95958D2625BB70006F610C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E9595902625BB70006F610C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E9595922625BB70006F610C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E95959B2625BB90006F610C /* CppLibWithSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CppLibWithSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E95959C2625BB90006F610C /* HelloAdam.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloAdam.cpp; sourceTree = "<group>"; };
+		2E95959D2625BB90006F610C /* HelloAdam.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HelloAdam.hpp; sourceTree = "<group>"; };
+		2E9595A12625BBBE006F610C /* HelloAdamWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloAdamWrapper.mm; sourceTree = "<group>"; };
+		2E9595A52625BBD0006F610C /* HelloAdamWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloAdamWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,9 @@
 		2E9595832625BB6C006F610C /* CppLibWithSwift */ = {
 			isa = PBXGroup;
 			children = (
+				2E9595992625BB78006F610C /* CppFiles */,
+				2E9595A02625BB9E006F610C /* Wrappers */,
+				2E95959B2625BB90006F610C /* CppLibWithSwift-Bridging-Header.h */,
 				2E9595842625BB6C006F610C /* AppDelegate.swift */,
 				2E9595862625BB6C006F610C /* SceneDelegate.swift */,
 				2E9595882625BB6C006F610C /* ViewController.swift */,
@@ -65,6 +75,24 @@
 				2E9595922625BB70006F610C /* Info.plist */,
 			);
 			path = CppLibWithSwift;
+			sourceTree = "<group>";
+		};
+		2E9595992625BB78006F610C /* CppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2E95959C2625BB90006F610C /* HelloAdam.cpp */,
+				2E95959D2625BB90006F610C /* HelloAdam.hpp */,
+			);
+			path = CppFiles;
+			sourceTree = "<group>";
+		};
+		2E9595A02625BB9E006F610C /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				2E9595A12625BBBE006F610C /* HelloAdamWrapper.mm */,
+				2E9595A52625BBD0006F610C /* HelloAdamWrapper.h */,
+			);
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +126,7 @@
 				TargetAttributes = {
 					2E9595802625BB6C006F610C = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -138,8 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9595892625BB6C006F610C /* ViewController.swift in Sources */,
+				2E95959E2625BB90006F610C /* HelloAdam.cpp in Sources */,
 				2E9595852625BB6C006F610C /* AppDelegate.swift in Sources */,
 				2E9595872625BB6C006F610C /* SceneDelegate.swift in Sources */,
+				2E9595A22625BBBE006F610C /* HelloAdamWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YV5NJXUR4S;
 				INFOPLIST_FILE = CppLibWithSwift/Info.plist;
@@ -295,6 +327,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Test.CppLibWithSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ahmedadam/Documents/Tests/CppLibWithSwift/CppLibWithSwift/CppLibWithSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YV5NJXUR4S;
 				INFOPLIST_FILE = CppLibWithSwift/Info.plist;
@@ -314,6 +349,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Test.CppLibWithSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ahmedadam/Documents/Tests/CppLibWithSwift/CppLibWithSwift/CppLibWithSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
